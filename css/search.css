@@ -1,0 +1,234 @@
+.sideImg {
+  height: 10em;
+  margin-bottom: 1em;
+  object-fit: contain;
+  align-self: flex-start;
+}
+#leftSearch {
+  display: flex;
+  flex-direction: column;
+  /* padding: 3em; */
+}
+#searchbar {
+  /* margin-top: 2em; */
+  border-radius: 20px;
+  height: 2.5em;
+  padding-left: 2.6em;
+  width: 20em;
+}
+ul {
+  list-style-type: none;
+}
+#rightSearch li {
+  margin: 0.5em;
+  display: flex;
+
+  /* justify-content: space-between; */
+}
+.searchCard {
+  background-color: #1a1a1a;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 19em;
+}
+
+#searchAlbums div div p {
+  margin: 0;
+}
+.cardimg {
+  width: 100%;
+  object-fit: contain;
+  margin-inline: auto;
+  padding-bottom: 1em;
+}
+.col-12 {
+  padding: 0;
+}
+h2 {
+  margin-block: 1em;
+}
+.searchCard h5 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+li img {
+  width: 45px;
+}
+.leftInside {
+  background-color: #1a1a1a;
+  padding: 2em;
+}
+.spanText {
+  display: flex;
+  flex-direction: column;
+}
+
+.searchCard:hover {
+  background-color: #242424;
+  transition: 0.5s;
+  text-decoration: none !important;
+  color: aliceblue;
+}
+
+a {
+  text-decoration: none !important;
+  color: aliceblue;
+}
+#rightSearch li:hover {
+  background-color: #242424;
+  transition: 0.5s;
+  text-decoration: none !important;
+  color: aliceblue;
+}
+#rightSearch li {
+  height: 60px;
+  padding: 5px;
+  padding-left: 1.5em;
+}
+.lupa {
+  font-size: 1.5em;
+  text-align: center;
+  padding-right: 0.3em;
+  transform: translateX(1.8em);
+  color: black;
+}
+#searchbardiv {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background-color: #0b0b0b;
+  margin-left: 16.67%;
+  padding-block: 1em;
+}
+#rightSearch li:hover span {
+  color: aliceblue;
+}
+.aleftInside:hover .leftInside {
+  background-color: #242424;
+  transition: 0.5s;
+  text-decoration: none !important;
+  color: aliceblue;
+}
+.leftInside,
+#rightSearch li,
+.searchCard {
+  transition: 0.5s;
+}
+#searchArtists .searchCard img {
+  border-radius: 50%;
+}
+.searchCard {
+  border-radius: 5px;
+  height: 20em;
+}
+#undersearch {
+  margin-top: 6em;
+}
+.duration {
+  margin-block: auto;
+}
+.searchbuttons {
+  margin-left: 0.7em;
+  border-radius: 20px;
+  padding-inline: 1.2em;
+  font-weight: 300;
+}
+.table {
+  color: antiquewhite;
+  margin-inline: 2em;
+}
+.songtitle {
+  display: flex;
+  align-items: center;
+}
+.songtitle .spanText span:nth-child(2) {
+  font-weight: 300;
+}
+.table th,
+.table tr,
+.table td {
+  padding: 0.1em;
+  vertical-align: middle;
+  border: none;
+}
+.artistSearchImg {
+  width: 200px;
+}
+.searchArtistCard {
+  background-color: #1a1a1a;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 20em;
+  margin-inline: 0.3em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: 0.5s;
+}
+#artistsbody {
+  margin-left: 1em;
+}
+/* .searchArtistCard h5 {
+  margin-top: 0.7em;
+} */
+.albumsSearchImg {
+  width: 13.5em;
+  margin-bottom: 0.7em;
+  border-radius: 0;
+}
+.artistSearchImg {
+  margin-inline: auto;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.searchArtistCard h5 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+a {
+  color: inherit !important;
+}
+tr {
+  transition: 0.3s;
+}
+tr:hover {
+  background-color: #242424;
+  transition: 0.3s;
+}
+th {
+  text-align: center;
+}
+.table > thead:nth-child(1) > tr:nth-child(1) > th:nth-child(2),
+.table > thead:nth-child(1) > tr:nth-child(1) > th:nth-child(3),
+.table > thead:nth-child(1) > tr:nth-child(1) > th:nth-child(4) {
+  text-align: start;
+}
+.searchArtistCard:hover {
+  background-color: #242424;
+  transition: 0.5s;
+}
+.searchArtistCard a {
+  width: 100%;
+}
+
+.play-pause:hover {
+  cursor: pointer;
+}
+.user-menu {
+  margin-left: auto;
+  width: auto;
+  height: 100%;
+}
+#username {
+  margin-left: 1em;
+}

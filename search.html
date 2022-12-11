@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="css/search.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css" />
+</head>
+<body>
+  <div class="row content">
+    <div class="col-2 sidebar pl-3">
+      <a href="index.html"><img class="logo mt-2" src="img/logo.png" /></a>
+      <div class="links-container d-flex flex-column mt-3 ml-0">
+        <div class="link d-flex p-2 pl-0 mt-1">
+          <i class="fa-solid fa-house mt-1"></i>
+          <a href="index.html" class="ml-4">Home</a>
+        </div>
+        <div class="link d-flex p-2 mt-1">
+          <i class="fa-solid fa-magnifying-glass mt-1"></i>
+          <a href="search.html" class="ml-4">Search</a>
+        </div>
+        <div class="link d-flex p-2 mt-1">
+          <i class="fa-solid fa-book mt-1"></i>
+          <a href="#" class="ml-4">Your Library</a>
+        </div>
+      </div>
+      <div class="box-links d-flex flex-column mt-4">
+        <div class="box-link d-flex p-2">
+          <div
+            class="playlist-box d-flex justify-content-center align-items-center"
+          >
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <a href="#" class="ml-3">Create Playlist</a>
+        </div>
+        <div class="box-link d-flex p-2">
+          <div
+            class="liked-box d-flex justify-content-center align-items-center"
+          >
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <a href="#" class="ml-3">Liked Songs</a>
+        </div>
+      </div>
+      <div class="playlists mt-2 pt-1 overflow-auto">
+       
+      </div>
+      <div class="install mt-3 d-flex">
+        <div
+          class="circle d-flex justify-content-center align-items-center mt-1 mr-2"
+        >
+          <i class="fa-solid fa-arrow-down"></i>
+        </div>
+        <a href="#">Install App</a>
+      </div>
+    </div>
+    <div id="searchbardiv">
+      <i class="bi bi-search lupa"> </i> <input type="text" id="searchbar" placeholder="What do you want to Listen"></input>
+     
+          <button class="btn btn-dark searchbuttons active" id="searchAllButton">All</button>
+          <button class="btn btn-dark searchbuttons" id="searchSongsButton">Songs</button>
+          <button class="btn btn-dark searchbuttons" id="searchArtistsButton">Artists</button>
+          <button class="btn btn-dark searchbuttons" id="searchAlbumsButton">Albums</button>
+          <div class="user-menu d-flex align-items-center">
+            <img class="user-image" src="img/profile-image.jpg" />
+            <span id="username"></span>
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
+  </div>
+          <div class="col-10 main-content">     
+    <div class="row" id="undersearch">
+        <div class="col-3" id="h3BR"><h3>Best Result:</h3></div>
+        <div class="col-9 pl-5" id="h3S"><h3>Songs:</h3></div>
+       
+    </div>
+
+    <div class="row" id="mainrow"> 
+        <div class="col-3" id="leftSearch">
+        <img src="" alt="">
+        <h3>Name of Album</h3>
+        <p>Name of Artist</p>
+    </div>
+    <div class="col-9" >
+        <ul id="rightSearch">
+            <li><img src="" alt=""><span>Name of Artist</span><span>Name of track</span>
+            <span>duration</span></li>
+        </ul>
+    </div>
+    </div>
+    <h2 id="h2Albums">Albums</h2>
+    <div class="row" id="searchAlbums">
+    </div>
+    <h2 id="h2Artists">Artists</h2>
+    <div class="row" id="searchArtists">
+    </div>
+    </div>
+        </div>
+        <div
+        class="row vh-25 footer justify-content-center align-items-center d-none"
+      >
+        <div class="col-4 footer-left d-flex align-items-center">
+          <img class="album-cover-footer" src="img/album-cover.jpg" />
+          <div class="album-info d-flex flex-column ml-2">
+            <span class="footer-song">
+              Another one bites the Dust - Remastered 2011
+            </span>
+            <span class="footer-artist">Queen</span>
+          </div>
+          <div class="album-info-icons ml-4">
+            <i class="fa-regular fa-heart mr-2"></i>
+            <i class="fa-solid fa-maximize ml-2"></i>
+          </div>
+        </div>
+        <div class="col-5 footer-middle d-flex flex-column align-items-center">
+          <div
+            class="player-controls d-flex justify-content-between align-items-center"
+          >
+            <i class="fa-solid fa-shuffle"></i>
+            <i class="fa-solid fa-backward-step"></i>
+            <div class="play-pause paused" onclick="playerControls()">
+              <div
+                class="circle d-flex justify-content-center align-items-center"
+              >
+                <i class="fa-solid fa-play d-none play-footer"></i>
+                <i class="fa-solid fa-pause pause-footer"></i>
+              </div>
+            </div>
+            <i class="fa-solid fa-forward-step"></i>
+            <i class="fa-solid fa-repeat"></i>
+          </div>
+          <div class="song-duration d-flex align-items-center mt-2">
+            <span>0:12</span>
+            <div class="playtime mx-2"></div>
+            <span>3:34</span>
+          </div>
+        </div>
+        <div
+          class="col-3 footer-right d-flex justify-content-end align-items-center"
+        >
+          <div class="footer-right-icons">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-brands fa-chromecast"></i>
+            <i class="fa-solid fa-volume-high"></i>
+          </div>
+          <div class="volume-bar"></div>
+        </div>
+      </div>
+    </div>
+      <audio src="" id="audio"></audio>
+    </body>
+
+
+    <script src="search.js"> </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script
+src="https://kit.fontawesome.com/e1177dc7ed.js"
+crossorigin="anonymous"
+></script>
+</body>
+</html>

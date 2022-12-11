@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Artist</title>
+  </head>
+  <body>
+    <div class="container-fluid vh-100 px-0">
+      <div class="row content">
+        <div class="col-2 sidebar pl-3">
+          <a href="index.html"><img class="logo mt-2" src="img/logo.png" /></a>
+
+          <div class="links-container d-flex flex-column mt-3 ml-0">
+            <div class="link d-flex p-2 pl-0 mt-1">
+              <i class="fa-solid fa-house mt-1"></i>
+              <a href="index.html" class="ml-4">Home</a>
+            </div>
+            <div class="link d-flex p-2 mt-1">
+              <i class="fa-solid fa-magnifying-glass mt-1"></i>
+              <a href="search.html" class="ml-4">Search</a>
+            </div>
+            <div class="link d-flex p-2 mt-1">
+              <i class="fa-solid fa-book mt-1"></i>
+              <a href="#" class="ml-4">Your Library</a>
+            </div>
+          </div>
+          <div class="box-links d-flex flex-column mt-4">
+            <div class="box-link d-flex p-2">
+              <div
+                class="playlist-box d-flex justify-content-center align-items-center"
+              >
+                <i class="fa-solid fa-plus"></i>
+              </div>
+              <a href="#" class="ml-3">Create Playlist</a>
+            </div>
+            <div class="box-link d-flex p-2">
+              <div
+                class="liked-box d-flex justify-content-center align-items-center"
+              >
+                <i class="fa-solid fa-heart"></i>
+              </div>
+              <a href="#" class="ml-3">Liked Songs</a>
+            </div>
+          </div>
+          <div class="playlists mt-2 pt-1 overflow-auto">
+           
+          </div>
+          <div class="install mt-3 d-flex">
+            <div
+              class="circle d-flex justify-content-center align-items-center mt-1 mr-2"
+            >
+              <i class="fa-solid fa-arrow-down"></i>
+            </div>
+            <a href="#">Install App</a>
+          </div>
+        </div>
+        <div class="row m-3 justify-content-between top-content-bar">
+          <div class="nav-controls d-flex justify-content-between align-items-center">
+            <div
+              class="nav-circle mr-3 d-flex justify-content-center align-items-center" onclick="back()"
+            >
+              <i class="fa-solid fa-chevron-left"></i>
+            </div>
+            <div
+              class="nav-circle-inactive d-flex justify-content-center align-items-center"
+            >
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+      <i class="bi bi-search lupa"> </i> <a href="search.html"> <input type="text" id="searchbar" placeholder="What do you want to Listen"></input></a>
+
+          </div>
+          <div class="user-menu d-flex align-items-center">
+            <img class="user-image" src="img/profile-image.jpg" />
+            <span id="username">Daniel Earp</span>
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
+        </div>
+        <div class="col-10 main-content">
+          <div class="row">
+            <img class="banner" />
+          </div>
+          <div class="row flex-column">
+            <div
+              class="artist-info d-flex flex-column justify-content-end ml-4"
+            >
+              <div class="verified-container d-flex">
+                <img class="tick mr-1" src="/img/verified.png" />
+                <span class="verified">Verified Artist</span>
+              </div>
+
+              <span class="artist"></span>
+              <span class="listeners">
+                <span>Monthly listeners</span>
+              </span>
+            </div>
+            <div class="artist-container mt-3">
+              <div class="row w-25 mt-3 ml-3 d-flex align-items-center">
+                <div
+                  class="green-circle d-flex justify-content-center align-items-center"
+                >
+                  <i class="fa-solid fa-pause"></i>
+                </div>
+                <div class="follow ml-4 mt-1">
+                  <button type="button" class="btn btn-sm btn-outline-light">
+                    Follow
+                  </button>
+                </div>
+                <div class="more-info ml-4 mt-2">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+              </div>
+              <div class="headings d-flex justify-content-between mt-4">
+                <span class="ml-3">Popular</span>
+                <span>Artist Pick</span>
+              </div>
+              <div class="content h-100 d-flex">
+                <div class="songs-container mt-3 ml-4 d-flex flex-column"></div>
+
+                <!-- Songs are generated here-->
+
+                <div class="artist-pick h-25 d-flex">
+                  <img class="artist-pick-album-cover" />
+                  <div class="artist-pick-info d-flex flex-column ml-3 mt-1">
+                    <span class="artist-pick-artist"></span>
+                    <span class="pick-category">Playlist</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="row vh-25 footer justify-content-center align-items-center d-none"
+      >
+        <div class="col-4 footer-left d-flex align-items-center">
+          <img class="album-cover-footer" src="img/album-cover.jpg" />
+          <div class="album-info d-flex flex-column ml-2">
+            <span class="footer-song">
+              Another one bites the Dust - Remastered 2011
+            </span>
+            <span class="footer-artist">Queen</span>
+          </div>
+          <div class="album-info-icons ml-4">
+            <i class="fa-regular fa-heart mr-2"></i>
+            <i class="fa-solid fa-maximize ml-2"></i>
+          </div>
+        </div>
+        <div class="col-5 footer-middle d-flex flex-column align-items-center">
+          <div
+            class="player-controls d-flex justify-content-between align-items-center"
+          >
+            <i class="fa-solid fa-shuffle"></i>
+            <i class="fa-solid fa-backward-step"></i>
+            <div class="play-pause paused" onclick="playerControls()">
+              <div
+                class="circle d-flex justify-content-center align-items-center"
+              >
+                <i class="fa-solid fa-play d-none play-footer"></i>
+                <i class="fa-solid fa-pause pause-footer"></i>
+              </div>
+            </div>
+            <i class="fa-solid fa-forward-step"></i>
+            <i class="fa-solid fa-repeat"></i>
+          </div>
+          <div class="song-duration d-flex align-items-center mt-2">
+            <span>0:12</span>
+            <div class="playtime mx-2"></div>
+            <span>3:34</span>
+          </div>
+        </div>
+        <div
+          class="col-3 footer-right d-flex justify-content-end align-items-center"
+        >
+          <div class="footer-right-icons">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-brands fa-chromecast"></i>
+            <i class="fa-solid fa-volume-high"></i>
+          </div>
+          <div class="volume-bar"></div>
+        </div>
+      </div>
+    </div>
+    <audio src="" id="audio"></audio>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://kit.fontawesome.com/b4fde0112e.js"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://kit.fontawesome.com/e1177dc7ed.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/artists.js"></script>
+</html>
